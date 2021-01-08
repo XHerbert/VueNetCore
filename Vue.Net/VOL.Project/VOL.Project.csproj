@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VOL.Core\VOL.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IRepositories\ProjectInfo\" />
+    <Folder Include="IServices\ProjectInfo\" />
+    <Folder Include="Services\ProjectInfo\Partial\" />
+  </ItemGroup>
+
+</Project>

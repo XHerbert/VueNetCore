@@ -1,0 +1,14 @@
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\bin\Debug\netcoreapp3.1\VOL.Project.deps.json
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\bin\Debug\netcoreapp3.1\VOL.Project.dll
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\bin\Debug\netcoreapp3.1\VOL.Project.pdb
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\obj\Debug\netcoreapp3.1\VOL.Project.AssemblyInfoInputs.cache
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\obj\Debug\netcoreapp3.1\VOL.Project.AssemblyInfo.cs
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\obj\Debug\netcoreapp3.1\VOL.Project.csproj.CoreCompileInputs.cache
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\obj\Debug\netcoreapp3.1\VOL.Project.dll
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\obj\Debug\netcoreapp3.1\VOL.Project.pdb
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\obj\Debug\netcoreapp3.1\VOL.Project.csprojAssemblyReference.cache
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\bin\Debug\netcoreapp3.1\VOL.Core.dll
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\bin\Debug\netcoreapp3.1\VOL.Entity.dll
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\bin\Debug\netcoreapp3.1\VOL.Core.pdb
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\bin\Debug\netcoreapp3.1\VOL.Entity.pdb
+E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Project\obj\Debug\netcoreapp3.1\VOL.Project.csproj.CopyComplete
