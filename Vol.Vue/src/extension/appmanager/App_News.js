@@ -136,6 +136,9 @@ let extension = {
                 return false;
             }
             formData.mainData.Content = this.currentRow.Content;
+            if (!formData.mainData.ViewCount) {
+                formData.mainData.ViewCount = 0;
+            }
             return true;
         },
         preview(row) { //预览html页面
