@@ -24,6 +24,7 @@
   <ItemGroup>
     <Folder Include="Controllers\Project\Partial\" />
     <Folder Include="Download\" />
+    <Folder Include="wwwroot\Upload\Tables\App_News\" />
   </ItemGroup>
 
 

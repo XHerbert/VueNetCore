@@ -9,7 +9,6 @@
 using System;
 using System.Threading.Tasks;
 using VOL.Core.Extensions;
-using VOL.Core.ManageUser;
 using VOL.Core.Utilities;
 using VOL.Entity.DomainModels;
 
@@ -19,7 +18,7 @@ namespace VOL.AppManager.Services
     {
         public async Task<WebResponseContent> GetDemoPageList()
         {
-            var data = await repository.FindAsync(x => 1 == 1, s => new { s.CreateDate, s.Creator, s.NewsType, s.Title, s.DetailUrl, s.ImageUrl});
+            var data = await repository.FindAsync(x => 1 == 1, s => new { s.CreateDate, s.Creator, s.NewsType, s.Title, s.DetailUrl, s.ImageUrl });
             return WebResponseContent.Instance.OK(null, data);
         }
         public WebResponseContent SetCover(App_News news)
@@ -46,13 +45,16 @@ namespace VOL.AppManager.Services
                 return webResponseContent.Error("未获取到页面的模板,请确认模板是否存在");
             }
             string filePath;
+            string filePathWithParam;
             string fileName;
             string urlPath;
+            string param;
             if (!string.IsNullOrEmpty(news.DetailUrl) && news.DetailUrl.IndexOf("/") != -1 && news.DetailUrl.Split(".").Length == 2)
             {
                 var file = news.DetailUrl.Split("/");
-                fileName = file[file.Length - 1];
-                filePath = news.DetailUrl.Replace(fileName, "");
+                filePathWithParam = file[file.Length - 1];
+                fileName = filePathWithParam.IndexOf('?') > -1 ? filePathWithParam.Split('?')[0] : filePathWithParam;
+                filePath = news.DetailUrl.Replace(filePathWithParam, "");
                 urlPath = filePath;
             }
             else
@@ -62,10 +64,11 @@ namespace VOL.AppManager.Services
                 urlPath = $"static/news/{day}/";
                 filePath = urlPath.MapPath(true);
             }
+            param = $"?id={news.Id}";
             string content = template.Replace("{title}", news.Title).Replace("{date}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")).Replace("{content}", news.Content);
-            FileHelper.WriteFile((filePath.IndexOf("wwwroot") == -1 ? "wwwroot/" : "") + filePath, fileName, content);
+            FileHelper.WriteFile((filePath.IndexOf("wwwroot") == -1 ? "wwwroot/" : "") + filePath, fileName.IndexOf('?') > -1 ? fileName.Split('?')[0] : fileName, content);
             //更新数据库的url
-            news.DetailUrl = $"{urlPath}{fileName}";
+            news.DetailUrl = $"{urlPath}{fileName}{param}";
             repository.Update(news, x => new { news.DetailUrl, news.Content }, true);
             return webResponseContent.OK("面发布成功,可预览看效果", new { url = news.DetailUrl });
         }

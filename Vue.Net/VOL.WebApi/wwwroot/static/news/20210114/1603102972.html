@@ -1,7 +1,7 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <title> {title} </title>
+    <title> 再来一个亿 </title>
     <meta name="Generator" content="vue.netcore">
     <meta id="viewport" name="viewport"
           content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
@@ -57,25 +57,25 @@
 <body>
     <div class="title">
         <h2>
-            {title}
+            再来一个亿
         </h2>
         <div class="source">
             <span class="author">来源：U服务</span>
-            <span class="date">发布时间：{date}</span>
+            <span class="date">发布时间：2021-01-14 16:03:20</span>
             <span class="count">浏览次数：</span><span id="count">0</span>
         </div>
     </div>
     <div class="tm-content">
-        {content}
+        再来一个亿22
     </div>
     <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
 </body>
 
 </html>
 <script>
-    var count = 0, id;
+    var count = 0;
     window.onload = function () {
-
+        console.log($);
         var params = window.location.href.split("?");
         if (!params || params.length <= 1) {
             return;
@@ -83,29 +83,7 @@
         params[1].split("&").forEach(function (item) {
             var query = item.split("=");
             if (query.length > 0 && query[0] == "id") {
-                id = ~~query[1];
-                let options =
-                {
-                    url: "/api/news/getViewCount?id=" + id,
-                    type: "GET",
-                    success: (res) => {
-                        count = res.count;
-                        document.getElementById("count").innerText = count + 1;
-                        count += 1;
-                        let updateOptions =
-                        {
-                            url: "/api/news/updateViewCount",
-                            contentType: "application/json",
-                            data: JSON.stringify({ "ViewCount": count, "Id": id }),
-                            type: "POST",
-                            success: (res) => {
-                                console.log(res);
-                            }
-                        };
-                        $.ajax(updateOptions);
-                    }
-                };
-                $.ajax(options);
+                document.getElementById("count").innerText = (~~query[1]) + 1;
             }
         })
     }
