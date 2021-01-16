@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Effective\\VOL.Effective.csproj": {}
+    "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Effective\\VOL.Effective.csproj": {}
   },
   "projects": {
-    "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Core\\VOL.Core.csproj": {
+    "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Core\\VOL.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Core\\VOL.Core.csproj",
+        "projectUniqueName": "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Core\\VOL.Core.csproj",
         "projectName": "VOL.Core",
-        "projectPath": "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Core\\VOL.Core.csproj",
-        "packagesPath": "C:\\Users\\xuhb-c\\.nuget\\packages\\",
-        "outputPath": "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Core\\obj\\",
+        "projectPath": "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Core\\VOL.Core.csproj",
+        "packagesPath": "C:\\Users\\hanj\\.nuget\\packages\\",
+        "outputPath": "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\xuhb-c\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hanj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +31,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj": {
-                "projectPath": "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj"
+              "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj": {
+                "projectPath": "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj"
               }
             }
           }
@@ -146,20 +146,20 @@
         }
       }
     },
-    "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Effective\\VOL.Effective.csproj": {
+    "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Effective\\VOL.Effective.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Effective\\VOL.Effective.csproj",
+        "projectUniqueName": "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Effective\\VOL.Effective.csproj",
         "projectName": "VOL.Effective",
-        "projectPath": "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Effective\\VOL.Effective.csproj",
-        "packagesPath": "C:\\Users\\xuhb-c\\.nuget\\packages\\",
-        "outputPath": "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Effective\\obj\\",
+        "projectPath": "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Effective\\VOL.Effective.csproj",
+        "packagesPath": "C:\\Users\\hanj\\.nuget\\packages\\",
+        "outputPath": "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Effective\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\xuhb-c\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hanj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -173,8 +173,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Core\\VOL.Core.csproj": {
-                "projectPath": "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Core\\VOL.Core.csproj"
+              "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Core\\VOL.Core.csproj": {
+                "projectPath": "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Core\\VOL.Core.csproj"
               }
             }
           }
@@ -210,20 +210,20 @@
         }
       }
     },
-    "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj": {
+    "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj",
+        "projectUniqueName": "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj",
         "projectName": "VOL.Entity",
-        "projectPath": "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj",
-        "packagesPath": "C:\\Users\\xuhb-c\\.nuget\\packages\\",
-        "outputPath": "E:\\vueDot\\Vue.NetCore\\Vue.NetCore-master\\Vue.Net\\VOL.Entity\\obj\\",
+        "projectPath": "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Entity\\VOL.Entity.csproj",
+        "packagesPath": "C:\\Users\\hanj\\.nuget\\packages\\",
+        "outputPath": "E:\\NetCoreVue\\VueNetCore\\Vue.Net\\VOL.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\xuhb-c\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hanj\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
