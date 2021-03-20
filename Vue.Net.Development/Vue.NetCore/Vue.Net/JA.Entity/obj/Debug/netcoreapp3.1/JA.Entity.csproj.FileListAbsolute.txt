@@ -1,0 +1,9 @@
+E:\NetCoreVue\VueNetCore\Vue.Net.Development\Vue.NetCore\Vue.Net\JA.Entity\bin\Debug\netcoreapp3.1\JA.Entity.deps.json
+E:\NetCoreVue\VueNetCore\Vue.Net.Development\Vue.NetCore\Vue.Net\JA.Entity\bin\Debug\netcoreapp3.1\JA.Entity.dll
+E:\NetCoreVue\VueNetCore\Vue.Net.Development\Vue.NetCore\Vue.Net\JA.Entity\bin\Debug\netcoreapp3.1\JA.Entity.pdb
+E:\NetCoreVue\VueNetCore\Vue.Net.Development\Vue.NetCore\Vue.Net\JA.Entity\obj\Debug\netcoreapp3.1\JA.Entity.csprojAssemblyReference.cache
+E:\NetCoreVue\VueNetCore\Vue.Net.Development\Vue.NetCore\Vue.Net\JA.Entity\obj\Debug\netcoreapp3.1\JA.Entity.AssemblyInfoInputs.cache
+E:\NetCoreVue\VueNetCore\Vue.Net.Development\Vue.NetCore\Vue.Net\JA.Entity\obj\Debug\netcoreapp3.1\JA.Entity.AssemblyInfo.cs
+E:\NetCoreVue\VueNetCore\Vue.Net.Development\Vue.NetCore\Vue.Net\JA.Entity\obj\Debug\netcoreapp3.1\JA.Entity.csproj.CoreCompileInputs.cache
+E:\NetCoreVue\VueNetCore\Vue.Net.Development\Vue.NetCore\Vue.Net\JA.Entity\obj\Debug\netcoreapp3.1\JA.Entity.dll
+E:\NetCoreVue\VueNetCore\Vue.Net.Development\Vue.NetCore\Vue.Net\JA.Entity\obj\Debug\netcoreapp3.1\JA.Entity.pdb

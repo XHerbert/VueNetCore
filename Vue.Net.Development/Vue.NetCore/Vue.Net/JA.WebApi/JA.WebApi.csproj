@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JA.Builder\JA.Builder.csproj" />
+    <ProjectReference Include="..\JA.Business\JA.Business.csproj" />
+    <ProjectReference Include="..\JA.Core\JA.Core.csproj" />
+    <ProjectReference Include="..\JA.Entity\JA.Entity.csproj" />
+    <ProjectReference Include="..\JA.System\JA.System.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Upload\" />
+  </ItemGroup>
+
+
+</Project>
