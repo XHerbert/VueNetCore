@@ -68,5 +68,9 @@ let viewgird = [
         path: '/monthRentReport',
         name: 'monthRentReport',
         component: () => import('@/views/business/MonthRentReport.vue')
+    }, {
+        path: '/tenantsRentReport',
+        name: 'tenantsRentReport',
+        component: () => import('@/views/business/TenantsRentReport.vue')
     }]
 export default viewgird
