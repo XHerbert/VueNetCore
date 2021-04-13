@@ -40,6 +40,12 @@ namespace JA.Core.Utilities
 
 			return vDate;
 		}
+
+		public static string GetCurrentPeriod(DateTime? date)
+        {
+			if (!date.HasValue) return string.Empty;
+			return date.Value.ToString("yyyyMM");
+		}
   }
 }
 

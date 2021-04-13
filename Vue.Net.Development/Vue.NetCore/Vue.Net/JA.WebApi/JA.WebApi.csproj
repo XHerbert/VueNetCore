@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>2aa4eaa6-f6c9-42b2-b8e0-54ef084973d4</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +22,8 @@
   <ItemGroup>
     <Folder Include="Upload\" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 
 </Project>

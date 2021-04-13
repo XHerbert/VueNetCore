@@ -8,7 +8,7 @@ let buttons = [{
     onClick: function () {
         this.search();
     }
-}, 
+},
 // {
 //     name: "重 置",
 //     icon: 'md-refresh',
@@ -36,7 +36,7 @@ let buttons = [{
     onClick: function () {
         this.add();
     }
-},{
+}, {
     name: "编 辑",
     icon: 'md-create',
     value: 'Update',
@@ -45,7 +45,7 @@ let buttons = [{
     onClick: function () {
         this.edit();
     }
-},  {
+}, {
     name: "删 除",
     icon: 'md-close',
     class: '',
@@ -54,7 +54,7 @@ let buttons = [{
     onClick: function () {
         this.del();
     }
-},  {
+}, {
     name: "审 核",
     icon: 'md-create',
     class: '',
@@ -79,14 +79,6 @@ let buttons = [{
     value: 'Export',
     onClick: function () {
         this.export();
-    }
-}, {
-    name: "数据结构",
-    icon: 'ios-cog',
-    class: '',
-    value: '',
-    onClick: function () {
-        this.openViewColumns();
     }
 }]
 

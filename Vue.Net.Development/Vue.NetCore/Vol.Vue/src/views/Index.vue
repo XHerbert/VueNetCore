@@ -1,46 +1,39 @@
 <template>
-  <div id="vol-container"
-       :class="['vol-theme-' + theme]">
-    <div class="vol-aside"
-         :style="{width:menuWidth+'px'}">
-      <div class="header"
-           :style="{width:menuWidth-1+'px'}">
-        <img v-show="!isCollapse"
-             v-bind:src="logo" />
-        <Icon type="ios-list"
-              @click="toggleLeft"
-              class="collapse-menu" />
+  <div id="vol-container" :class="['vol-theme-' + theme]">
+    <div class="vol-aside" :style="{ width: menuWidth + 'px' }">
+      <div class="header" :style="{ width: menuWidth - 1 + 'px' }">
+        <img v-show="!isCollapse" v-bind:src="logo" />
+        <Icon type="ios-list" @click="toggleLeft" class="collapse-menu" />
       </div>
       <div class="vol-menu">
         <el-scrollbar style="height: 100%">
-          <VolMenu :onSelect="onSelect"
-                   :isCollapse="isCollapse"
-                   :list="menuOptions"></VolMenu>
+          <VolMenu
+            :onSelect="onSelect"
+            :isCollapse="isCollapse"
+            :list="menuOptions"
+          ></VolMenu>
         </el-scrollbar>
       </div>
     </div>
-    <div class="vol-container"
-         :style="{left:menuWidth-1+'px'}">
+    <div class="vol-container" :style="{ left: menuWidth - 1 + 'px' }">
       <div class="vol-header">
-
-        <span class="header-text">支持业务代码扩展的快速开发框架</span>
+        <span class="header-text">吉安市房地产经营管理系统</span>
         <div class="header-info">
           <div class="h-link">
             <ul>
-              <li v-for="(item, index) in links"
-                  :key="index"
-                  v-bind:class="{ actived: selectId == item.id }">
-                <a href="javascript:void(0)"
-                   @click="to(item)">{{
+              <li
+                v-for="(item, index) in links"
+                :key="index"
+                v-bind:class="{ actived: selectId == item.id }"
+              >
+                <a href="javascript:void(0)" @click="to(item)">{{
                   item.text
                 }}</a>
               </li>
             </ul>
           </div>
           <div>
-            <img class="user-header"
-                 :src="userImg"
-                 :onerror="errorImg" />
+            <img class="user-header" :src="userImg" :onerror="errorImg" />
           </div>
           <div class="user">
             <span>{{ userName }}</span>
@@ -49,57 +42,73 @@
             <!-- <span>星期五</span> -->
           </div>
           <div class="settings">
-            <Icon :size="20"
-                  type="md-settings"
-                  @click="
+            <Icon
+              :size="20"
+              type="md-settings-"
+              @click="
                 () => {
                   theme_moel = true;
                 }
-              " />
+              "
+            />
             <!-- <Icon type="md-paw" /> -->
           </div>
         </div>
       </div>
       <div class="vol-path">
         <!-- 2020.05.31增加顶部导tabs超出后滚动 -->
-        <Tabs @on-click="selectNav"
-              :before-remove="removeNav"
-              v-model="selectId"
-              type="card"
-              :animated="false"
-              class="header-navigation">
+        <Tabs
+          @on-click="selectNav"
+          :before-remove="removeNav"
+          v-model="selectId"
+          type="card"
+          :animated="false"
+          class="header-navigation"
+        >
           <!-- 2020.07.31增加手动打开tabs -->
-          <TabPane :class="{ active: navIndex == selectId }"
-                   :name="item.navIndex"
-                   :closable="navIndex != 0"
-                   v-for="(item, navIndex) in navigation"
-                   :key="navIndex"
-                   :label="item.name"></TabPane>
+          <TabPane
+            :class="{ active: navIndex == selectId }"
+            :name="item.navIndex"
+            :closable="navIndex != 0"
+            v-for="(item, navIndex) in navigation"
+            :key="navIndex"
+            :label="item.name"
+          ></TabPane>
         </Tabs>
       </div>
-      <div class="vol-main"
-           id="vol-main">
+      <div class="vol-main" id="vol-main">
         <el-scrollbar style="height: 100%">
           <!-- 2020.06.03增加路由切换时加载提示 -->
           <loading v-show="$store.getters.isLoading()"></loading>
           <!-- 2020.10.09增加路由keepAlive属性设置不缓存组件(默认缓存组件) -->
           <keep-alive>
-            <router-view v-if="!$route.meta||($route.meta && !$route.meta.hasOwnProperty('keepAlive'))"></router-view>
+            <router-view
+              v-if="
+                !$route.meta ||
+                ($route.meta && !$route.meta.hasOwnProperty('keepAlive'))
+              "
+            ></router-view>
           </keep-alive>
-          <router-view v-if="$route.meta && $route.meta.hasOwnProperty('keepAlive')"></router-view>
+          <router-view
+            v-if="$route.meta && $route.meta.hasOwnProperty('keepAlive')"
+          ></router-view>
         </el-scrollbar>
       </div>
     </div>
     <!-- 2020.04.02增加换皮肤功能 -->
-    <Drawer class="theme-selector"
-            title="选择皮肤颜色"
-            :closable="false"
-            v-model="theme_moel">
-      <div @click="changeThen(item.name)"
-           class="item"
-           v-for="(item, index) in theme_color"
-           :key="index"
-           :style="{ background: item.color }"></div>
+    <Drawer
+      class="theme-selector"
+      title="选择皮肤颜色"
+      :closable="false"
+      v-model="theme_moel"
+    >
+      <div
+        @click="changeThen(item.name)"
+        class="item"
+        v-for="(item, index) in theme_color"
+        :key="index"
+        :style="{ background: item.color }"
+      ></div>
     </Drawer>
   </div>
 </template>
@@ -109,7 +118,7 @@ import VolMenu from "@/components/basic/VolElementMenu.vue";
 let imgUrl = require("@/assets/imgs/logo.png");
 var $vueIndex;
 export default {
-  data () {
+  data() {
     return {
       menuWidth: 200,
       isCollapse: false,
@@ -132,9 +141,6 @@ export default {
       date: "",
       theme: "blue",
       links: [
-        { text: "大屏数据", path: "/bigdata", id: -3 },
-        { text: "框架文档", path: "/document", id: -2 },
-        { text: "GitHub", path: "#", id: -3 },
         { text: "个人中心", path: "/UserInfo", id: -1 },
         { text: "安全退出", path: "/login", id: -4 },
       ],
@@ -145,7 +151,7 @@ export default {
     VolMenu,
     loading,
   },
-  created () {
+  created() {
     let theme = localStorage.getItem("vol_theme");
     if (theme) {
       this.theme = theme;
@@ -200,24 +206,23 @@ export default {
     this.selectId = 0;
   },
   methods: {
-    toggleLeft () {
+    toggleLeft() {
       this.isCollapse = !this.isCollapse;
-      this.menuWidth = this.isCollapse ? 63 : 200
-    }
-    ,
-    changeThen (name) {
+      this.menuWidth = this.isCollapse ? 63 : 200;
+    },
+    changeThen(name) {
       if (this.theme != name) {
         this.theme = name;
       }
       this.menu_theme = this.theme == "white" ? "dark" : "light";
       localStorage.setItem("vol_theme", name);
     },
-    to (item) {
+    to(item) {
       /* 2020.07.31增加手动打开tabs*/
-      if (item.path == "#") {
-        window.open("https://github.com/cq-panda/Vue.NetCore");
-        return;
-      }
+      // if (item.path == "#") {
+      //   window.open("https://github.com/cq-panda/Vue.NetCore");
+      //   return;
+      // }
       //2020.07.31
       //2020.08.08修复退出登录切换帐号后权限缓存没刷新的问题
       if (typeof item == "string" || item.path == "/login") {
@@ -232,7 +237,7 @@ export default {
       if (item.path == "#") return;
       this.open(item);
     },
-    open (item, useRoute) {
+    open(item, useRoute) {
       /* 2020.07.31增加手动打开tabs*/
       let _index = this.navigation.findIndex((x) => {
         return x.path == item.path;
@@ -254,19 +259,19 @@ export default {
         this.$router.push(item);
       }
     },
-    setItem (item) {
+    setItem(item) {
       /* 2020.07.31增加手动打开tabs*/
       localStorage.setItem(
         window.location.origin + "_tabs",
         JSON.stringify(item)
       );
     },
-    getItem () {
+    getItem() {
       /* 2020.07.31增加手动打开tabs*/
       let nav = localStorage.getItem(window.location.origin + "_tabs");
       return nav ? JSON.parse(nav) : null;
     },
-    close (path) {
+    close(path) {
       /* 2020.07.31增加手动打开tabs*/
       let index = this.navigation.findIndex((x) => {
         return x.path == path;
@@ -276,14 +281,14 @@ export default {
       }
       this.removeNav(index);
     },
-    selectNav (index) {
+    selectNav(index) {
       /* 2020.07.31增加手动打开tabs*/
       this.selectId = index;
       this.$router.push({
         path: this.navigation[index].path,
       });
     },
-    removeNav (_index) {
+    removeNav(_index) {
       //2020.06.02修复关闭tabs时，可能关闭两个tabs的问题
       /* 2020.07.31增加手动打开tabs*/
       return new Promise(() => {
@@ -303,17 +308,17 @@ export default {
         this.navigation.splice(_index, 1);
       });
     },
-    getSelectMenuName (id) {
+    getSelectMenuName(id) {
       return this.menuOptions.find(function (x) {
         return x.id == id;
       });
     },
-    onSelect (treeId) {
+    onSelect(treeId) {
       /* 2020.07.31增加手动打开tabs*/
       var item = $vueIndex.getSelectMenuName(treeId);
       this.open(item, false);
     },
-    showTime () {
+    showTime() {
       var week = new Array(
         "星期一",
         "星期二",
@@ -346,10 +351,10 @@ export default {
         " " + //2020.08.30修复首页日期星期天不显示的问题
         (week[date.getDay() - 1] || week[6]);
     },
-    handleOpen (key, keyPath) {
+    handleOpen(key, keyPath) {
       console.log(key, keyPath);
     },
-    handleClose (key, keyPath) {
+    handleClose(key, keyPath) {
       console.log(key, keyPath);
     },
   },

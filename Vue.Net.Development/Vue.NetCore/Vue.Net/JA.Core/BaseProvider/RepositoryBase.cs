@@ -26,13 +26,13 @@ namespace JA.Core.BaseProvider
         public RepositoryBase()
         {
         }
-        public RepositoryBase(VOLContext dbContext)
+        public RepositoryBase(JAContext dbContext)
         {
             this.DefaultDbContext = dbContext ?? throw new Exception("dbContext未实例化。");
         }
 
-        private VOLContext DefaultDbContext { get; set; }
-        private VOLContext EFContext
+        private JAContext DefaultDbContext { get; set; }
+        private JAContext EFContext
         {
             get
             {
@@ -41,7 +41,7 @@ namespace JA.Core.BaseProvider
             }
         }
 
-        public virtual VOLContext DbContext
+        public virtual JAContext DbContext
         {
             get { return DefaultDbContext; }
         }

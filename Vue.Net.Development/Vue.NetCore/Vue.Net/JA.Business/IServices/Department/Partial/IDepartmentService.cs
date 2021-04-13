@@ -1,6 +1,6 @@
 /*
 *Author：xuhbd
-*Contact：xuhb-c@glodon.com
+*Contact：xuhbd@foxmail.com
 *所有关于Department类的业务代码接口应在此处编写
 */
 using JA.Core.BaseProvider;

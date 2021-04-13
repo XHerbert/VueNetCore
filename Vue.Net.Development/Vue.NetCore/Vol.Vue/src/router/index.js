@@ -8,7 +8,8 @@ import viewgird from './viewGird'
 Vue.use(Router)
 
 const router = new Router({
-  mode: 'history',
+  //mode: 'history',
+  history: true,
   routes: [
     {
       path: '*',

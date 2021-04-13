@@ -8,7 +8,7 @@ namespace JA.System.Repositories
 {
     public partial class Sys_MenuRepository : RepositoryBase<Sys_Menu>, ISys_MenuRepository
     {
-        public Sys_MenuRepository(VOLContext dbContext)
+        public Sys_MenuRepository(JAContext dbContext)
         : base(dbContext)
         {
 

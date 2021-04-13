@@ -101,8 +101,7 @@ let data = {
       ],
       [
         { "title": "快捷编辑字段", "field": "expressField", placeholder: "字段可直接点击表格编辑或查看" },
-        { "title": "排序字段", "field": "sortName", "placeholder": "非自增主键需要输入排序字段" },
-        { "title": "还没想好", "field": "richtitle" }
+        { "title": "排序字段", "field": "sortName", "placeholder": "非自增主键需要输入排序字段" }
       ],
       // [ //待完
       //     { "title": "开启用户权限数据", "field": "enable", bind: { data: [{ key: 1, value: '是', key: 0, value: '否' }] }, type: 'switch', colSize: 2 },

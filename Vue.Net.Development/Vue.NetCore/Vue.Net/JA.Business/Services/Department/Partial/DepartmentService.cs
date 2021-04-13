@@ -1,6 +1,6 @@
 /*
  *Author：xuhbd
- *Contact：xuhb-c@glodon.com
+ *Contact：xuhbd@foxmail.com
  *所有关于Department类的业务代码应在此处编写
  *可使用repository.调用常用方法，获取EF/Dapper等信息
  *如果需要事务请使用repository.DbContextBeginTransaction
@@ -38,6 +38,20 @@ namespace JA.Business.Services
             _repository = dbRepository;
             //多租户会用到这init代码，其他情况可以不用
             //base.Init(dbRepository);
+        }
+
+        public override WebResponseContent Add(SaveModel saveDataModel)
+        {
+            WebResponseContent responseContent = WebResponseContent.Instance;
+            AddOnExecuting = (Department department, object list) =>
+            {
+                //TODO:根据规则生成实体的编码
+                //string code = $"DEP{0005}";
+                //department.DepartmentCode = code;
+                return responseContent.OK();
+            };
+
+            return base.Add(saveDataModel);
         }
     }
 }

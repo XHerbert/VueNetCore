@@ -70,16 +70,16 @@ namespace JA.Core.Extensions
                 SqlMapper.AddTypeHandler(new DapperParseGuidTypeHandler());
                 SqlMapper.RemoveTypeMap(typeof(Guid?));
 
-                //services.AddDbContext<VOLContext>();
+                //services.AddDbContext<JAContext>();
                 //mysql8.x的版本使用Pomelo.EntityFrameworkCore.MySql 3.1会产生异常，需要在字符串连接上添加allowPublicKeyRetrieval=true
-                services.AddDbContextPool<VOLContext>(optionsBuilder => { optionsBuilder.UseMySql(connectionString); }, 64);
+                services.AddDbContextPool<JAContext>(optionsBuilder => { optionsBuilder.UseMySql(connectionString); }, 64);
             }
             else if (DBType.Name == DbCurrentType.PgSql.ToString())
             {
-                services.AddDbContextPool<VOLContext>(optionsBuilder => { optionsBuilder.UseNpgsql(connectionString); }, 64);
+                services.AddDbContextPool<JAContext>(optionsBuilder => { optionsBuilder.UseNpgsql(connectionString); }, 64);
             }
             {
-                services.AddDbContextPool<VOLContext>(optionsBuilder => { optionsBuilder.UseSqlServer(connectionString); }, 64);
+                services.AddDbContextPool<JAContext>(optionsBuilder => { optionsBuilder.UseSqlServer(connectionString); }, 64);
             }
             //启用缓存
             if (AppSetting.UseRedis)

@@ -65,6 +65,17 @@ namespace JA.Core.ManageUser
         {
             get { return IsRoleIdSuperAdmin(this.RoleId); }
         }
+
+        public bool IsSystemAdmin
+        {
+            get { return IsRoleIdSystemAdmin(this.RoleId); }
+        }
+
+        private bool IsRoleIdSystemAdmin(int roleId)
+        {
+            return roleId == 14;
+        }
+
         /// <summary>
         /// 角色ID为1的默认为超级管理员
         /// </summary>

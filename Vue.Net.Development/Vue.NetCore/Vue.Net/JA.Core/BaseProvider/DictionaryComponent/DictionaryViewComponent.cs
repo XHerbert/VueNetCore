@@ -28,7 +28,7 @@ namespace JA.Core.BaseProvider.DictionaryComponent
 
             string[] dicNos = dropDownIds.Split(',');
             StringBuilder stringBuilder = new StringBuilder();
-            VOLContext context = DBServerProvider.GetEFDbContext();
+            JAContext context = DBServerProvider.GetEFDbContext();
             var dicData =await (from d in context.Set<Sys_Dictionary>()
                            join list in context.Set<Sys_DictionaryList>()
                            on d.Dic_ID equals list.Dic_ID

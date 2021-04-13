@@ -14,7 +14,7 @@ namespace JA.System.Repositories
 {
     public partial class Sys_UserRepository : RepositoryBase<Sys_User>, ISys_UserRepository
     {
-        public Sys_UserRepository(VOLContext dbContext)
+        public Sys_UserRepository(JAContext dbContext)
         : base(dbContext)
         {
 

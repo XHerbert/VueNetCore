@@ -5,23 +5,24 @@
         <img class="header-img" :src="userInfo.img" :onerror="errorImg" />
         <div class="text">
           <p class="name">
-            <span>{{userInfo.userName}}</span>
+            <span>{{ userInfo.userName }}</span>
           </p>
           <p class="date">
-            <span>注册日期：{{userInfo.createDate}}</span>
+            <span>注册日期：{{ userInfo.createDate }}</span>
           </p>
           <p>
             <Button
-              style="padding: 3px 16px;"
+              style="padding: 3px 16px"
               @click="modifyImg"
               type="info"
               size="small"
               ghost
-            >修改头像</Button>
+              >修改头像</Button
+            >
           </p>
         </div>
       </div>
-      <Divider>
+      <!-- <Divider>
         <span icon="ios-settings">信息绑定</span>
       </Divider>
       <Card class="binding-group" shadow>
@@ -45,13 +46,21 @@
             >绑定邮箱</Button>
           </Cell>
         </CellGroup>
-      </Card>
-      <div style="padding: 17px;">
-        <Button type="error" @click="modifyPwd" size="large" icon="md-lock" long>修改密码</Button>
+      </Card> -->
+      <div style="padding: 17px">
+        <Button type="error" @click="modifyPwd" size="large" icon="md-lock" long
+          >修改密码</Button
+        >
       </div>
     </div>
     <div class="right">
-      <vol-form ref="form" :load-key="true" :width="500" :formRules="editFormOptions" :formFileds="editFormFileds">
+      <vol-form
+        ref="form"
+        :load-key="true"
+        :width="500"
+        :formRules="editFormOptions"
+        :formFileds="editFormFileds"
+      >
         <div slot="header">
           <Divider>
             <span class="ivu-icon ios-alert-outline">个人信息</span>
@@ -59,13 +68,14 @@
         </div>
         <div slot="footer">
           <Button
-            style="margin-top: 2px;"
+            style="margin-top: 2px"
             type="info"
             size="large"
             icon="md-checkmark-circle"
             long
             @click="modifyInfo"
-          >保存</Button>
+            >保存</Button
+          >
         </div>
       </vol-form>
     </div>
@@ -77,8 +87,19 @@
       title="修改密码"
     >
       <div style="padding:10px;20px;">
-        <VolForm ref="pwd"  :formRules="modifyOptions.data" :formFileds="modifyOptions.fileds"></VolForm>
-        <Button type="info" size="large" icon="md-checkmark-circle" long @click="savePwd">保存</Button>
+        <VolForm
+          ref="pwd"
+          :formRules="modifyOptions.data"
+          :formFileds="modifyOptions.fileds"
+        ></VolForm>
+        <Button
+          type="info"
+          size="large"
+          icon="md-checkmark-circle"
+          long
+          @click="savePwd"
+          >保存</Button
+        >
       </div>
       <div slot="footer">
         <span></span>
@@ -242,7 +263,7 @@ export default {
             field: "gender",
             data: [],
             type: "select",
-          }
+          },
         ],
         [
           {

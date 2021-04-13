@@ -96,7 +96,8 @@ namespace JA.Core.Filters
                 }
             }
             //2020.05.05移除x.TableName.ToLower()转换,获取权限时已经转换成为小写
-            var actionAuth =  _userContext.GetPermissions(x => x.TableName == ActionPermission.TableName.ToLower())?.UserAuthArr;
+            var v = _userContext.GetPermissions(x => x.TableName == ActionPermission.TableName.ToLower());
+            var actionAuth =  v?.UserAuthArr;
 
             if (actionAuth == null
                  || actionAuth.Count() == 0

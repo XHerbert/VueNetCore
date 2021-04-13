@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 /*
  *Author：xuhbd
- *Contact：xuhb-c@glodon.com
+ *Contact：xuhbd@foxmail.com
  *代码由框架生成,任何更改都可能导致被代码生成器覆盖
  *如果数据库字段发生变化，请在代码生器重新生成此Model
  */
@@ -34,8 +34,6 @@ namespace JA.Entity.DomainModels
        [Display(Name ="单位编码")]
        [MaxLength(30)]
        [Column(TypeName="nvarchar(30)")]
-       [Editable(true)]
-       [Required(AllowEmptyStrings=false)]
        public string DepartmentCode { get; set; }
 
        /// <summary>
@@ -59,9 +57,10 @@ namespace JA.Entity.DomainModels
        ///创建人
        /// </summary>
        [Display(Name ="创建人")]
-       [Column(TypeName="int")]
+       [MaxLength(30)]
+       [Column(TypeName="nvarchar(30)")]
        [Required(AllowEmptyStrings=false)]
-       public int Creator { get; set; }
+       public string Creator { get; set; }
 
        /// <summary>
        ///创建时间
@@ -91,9 +90,10 @@ namespace JA.Entity.DomainModels
        ///修改人
        /// </summary>
        [Display(Name ="修改人")]
+       [MaxLength(30)]
        [JsonIgnore]
-       [Column(TypeName="int")]
-       public int? Modifier { get; set; }
+       [Column(TypeName="nvarchar(30)")]
+       public string Modifier { get; set; }
 
        /// <summary>
        ///修改时间

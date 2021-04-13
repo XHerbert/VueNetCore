@@ -14,7 +14,7 @@ namespace JA.System.Repositories
 {
     public partial class Sys_DictionaryListRepository : RepositoryBase<Sys_DictionaryList>, ISys_DictionaryListRepository
     {
-        public Sys_DictionaryListRepository(VOLContext dbContext)
+        public Sys_DictionaryListRepository(JAContext dbContext)
         : base(dbContext)
         {
 

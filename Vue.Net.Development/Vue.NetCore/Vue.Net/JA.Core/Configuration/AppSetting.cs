@@ -47,6 +47,8 @@ namespace JA.Core.Configuration
         /// </summary>
         public static int ExpMinutes { get; private set; } = 120;
 
+        public static bool Debug { get; private set; } = false;
+
         public static string CurrentPath { get; private set; } = null;
         public static string DownLoadPath { get { return CurrentPath + "\\Download\\"; } }
         public static void Init(IServiceCollection services, IConfiguration configuration)
@@ -78,6 +80,7 @@ namespace JA.Core.Configuration
     
 
             ExpMinutes = (configuration["ExpMinutes"] ?? "120").GetInt();
+            Debug = (configuration["Debug"] ?? "false").GetBool();
 
             DBType.Name = _connection.DBType;
             if (string.IsNullOrEmpty(_connection.DbConnectionString))

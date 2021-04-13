@@ -21,6 +21,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using VOL.Core.Configuration;
+using VOL.Core.Enums;
 using VOL.Core.Extensions;
 using VOL.Core.Filters;
 using VOL.Core.Middleware;
@@ -55,10 +56,10 @@ namespace VOL.WebApi
                 //  options.SuppressAsyncSuffixInActionNames = false;
             });
             services.AddControllers()
-              .AddNewtonsoftJson(op =>
+              .AddNewtonsoftJson(options =>
               {
-                  op.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
-                  op.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+                  options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+                  options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
               });
 
             Services.AddAuthentication(options =>
@@ -93,7 +94,7 @@ namespace VOL.WebApi
                  };
              });
             //必须appsettings.json中配置
-            string corsUrls = Configuration["CorsUrls"];
+            string corsUrls = Configuration[ConfigItem.CorsUrls];
             if (string.IsNullOrEmpty(corsUrls))
             {
                 throw new Exception("请配置跨请求的前端Url");
@@ -105,7 +106,7 @@ namespace VOL.WebApi
                     {
                         builder.WithOrigins(corsUrls.Split(","))
                         //添加预检请求过期时间
-                         .SetPreflightMaxAge(TimeSpan.FromSeconds(2520))
+                        .SetPreflightMaxAge(TimeSpan.FromSeconds(2520))
                         .AllowCredentials()
                         .AllowAnyHeader().AllowAnyMethod();
                     });

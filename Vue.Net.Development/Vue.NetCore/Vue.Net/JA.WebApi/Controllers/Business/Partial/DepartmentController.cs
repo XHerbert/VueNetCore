@@ -1,6 +1,6 @@
 /*
  *Author：xuhbd
- *Contact：xuhb-c@glodon.com
+ *Contact：xuhbd@foxmail.com
  *接口编写处...
  *如果接口需要做Action的权限验证，请在Action上使用属性
  *如: [ApiActionPermission("Department",Enums.ActionPermissionOptions.Search)]

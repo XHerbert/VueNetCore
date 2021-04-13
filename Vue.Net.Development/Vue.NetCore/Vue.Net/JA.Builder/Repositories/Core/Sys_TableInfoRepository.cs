@@ -8,7 +8,7 @@ namespace JA.Builder.Repositories
 {
     public partial class Sys_TableInfoRepository : RepositoryBase<Sys_TableInfo>, ISys_TableInfoRepository
     {
-        public Sys_TableInfoRepository(VOLContext dbContext)
+        public Sys_TableInfoRepository(JAContext dbContext)
         : base(dbContext)
         {
 

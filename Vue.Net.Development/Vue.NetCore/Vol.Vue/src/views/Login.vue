@@ -13,146 +13,147 @@
       <div class="login">
         <div class="login-contianer">
           <div class="login-form">
-            <Menu mode="horizontal"
-                  style="margin-bottom: 30px;"
-                  active-name="1">
+            <Menu mode="horizontal" style="margin-bottom: 30px" active-name="1">
               <MenuItem name="1">
-              <Icon type="md-contacts" />帐号登录
+                <Icon type="md-contacts" />帐号登录
               </MenuItem>
-              <MenuItem name="2">
+              <!-- <MenuItem name="2">
               <Icon type="ios-mail" />短信登录
-              </MenuItem>
+              </MenuItem> -->
             </Menu>
-            <div class="form-user"
-                 @keypress="loginPress">
+            <div class="form-user" @keypress="loginPress">
               <div class="item">
                 <div class="f-text">
-                  <label>
-                    <Icon type="ios-people"
-                          :size="20" />用户名：
-                  </label>
+                  <label> <Icon type="ios-people" :size="20" />用户名： </label>
                 </div>
                 <div class="f-input">
-                  <input type="text"
-                         v-focus
-                         v-model="userInfo.userName"
-                         placeholder="输入用户" />
+                  <input
+                    type="text"
+                    v-focus
+                    v-model="userInfo.userName"
+                    placeholder="输入用户"
+                  />
                 </div>
-                <div class="f-remove"
-                     @click="userInfo.userName=''">
+                <div class="f-remove" @click="userInfo.userName = ''">
                   <Icon type="ios-close-circle" />
                 </div>
               </div>
               <div class="item">
                 <div class="f-text">
                   <label>
-                    <Icon type="ios-lock"
-                          :size="20" />密&nbsp;&nbsp;&nbsp;码：
+                    <Icon type="ios-lock" :size="20" />密&nbsp;&nbsp;&nbsp;码：
                   </label>
                 </div>
                 <div class="f-input">
-                  <input type="password"
-                         v-focus
-                         v-model="userInfo.passWord"
-                         placeholder="输入密码" />
+                  <input
+                    type="password"
+                    v-focus
+                    v-model="userInfo.passWord"
+                    placeholder="输入密码"
+                  />
                 </div>
-                <div v-focus
-                     class="f-remove"
-                     @click="userInfo.passWord=''">
+                <div v-focus class="f-remove" @click="userInfo.passWord = ''">
                   <Icon type="ios-close-circle" />
                 </div>
               </div>
               <div class="item">
                 <div class="f-text">
                   <label>
-                    <Icon type="md-images"
-                          v-focus
-                          :size="20" />验证码：
+                    <Icon type="md-images" v-focus :size="20" />验证码：
                   </label>
                 </div>
                 <div class="f-input">
-                  <input v-focus
-                         type="text"
-                         v-model="userInfo.verificationCode"
-                         placeholder="输入验证码" />
+                  <input
+                    v-focus
+                    type="text"
+                    v-model="userInfo.verificationCode"
+                    placeholder="输入验证码"
+                  />
                 </div>
-                <div class="code"
-                     @click="()=>{getVierificationCode()}">
-                  <img v-show="codeImgSrc!=''"
-                       :src="codeImgSrc" />
+                <div
+                  class="code"
+                  @click="
+                    () => {
+                      getVierificationCode();
+                    }
+                  "
+                >
+                  <img v-show="codeImgSrc != ''" :src="codeImgSrc" />
                 </div>
               </div>
             </div>
             <div style="loging-btn">
-              <Button size="large"
-                      :loading="loading"
-                      type="info"
-                      @click="login"
-                      long>
+              <Button
+                size="large"
+                :loading="loading"
+                type="info"
+                @click="login"
+                long
+              >
                 <span v-if="!loading">登录</span>
                 <span v-else>正在登录...</span>
               </Button>
             </div>
-            <div class="action">
-              <a @click="()=>{}">注册</a>
-              <a @click="()=>{}">忘记密码</a>
-            </div>
+            <!-- <div class="action">
+              <a @click="() => {}">注册</a>
+              <a @click="() => {}">忘记密码</a>
+            </div> -->
           </div>
         </div>
       </div>
     </div>
     <div class="l-bg"></div>
     <div class="r-bg"></div>
-    <div class="login-footer">
-      <!--<a @click="toGitHub">
+    <!--<div class="login-footer">
+      <a @click="toGitHub">
         <Icon type="logo-github" />GitHub
       </a>
       <a>QQ群：45221949</a>
       <a href="http://www.beian.miit.gov.cn/"
-         target="_blank">京ICP备19056538号-1</a>-->
-    </div>
+         target="_blank">京ICP备19056538号-1</a>
+    </div>-->
   </div>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
       loading: false,
       codeImgSrc: "",
       userInfo: {
         userName: "",
         passWord: "",
-        verificationCode: ""
-      }
+        verificationCode: "",
+      },
     };
   },
   directives: {
     focus: {
       inserted: function (el) {
         el.focus();
-      }
-    }
+      },
+    },
   },
-  created () {
+  created() {
     this.getVierificationCode();
   },
   methods: {
-    getVierificationCode () {
-      this.http.get("/api/User/getVierificationCode").then(x => {
+    getVierificationCode() {
+      this.http.get("/api/User/getVierificationCode").then((x) => {
         this.codeImgSrc = "data:image/png;base64," + x.img;
         this.userInfo.UUID = x.uuid;
       });
     },
 
-    toGitHub () {
+    toGitHub() {
       window.open("https://github.com/cq-panda/Vue.NetCore");
     },
-    loginPress (e) {
+    loginPress(e) {
       if (event.keyCode == 13) {
         this.login();
       }
     },
-    login () {
+    login() {
       if (this.userInfo.userName == "" || this.userInfo.userName.trim() == "")
         return this.$Message.error("请输入用户名");
       if (this.userInfo.passWord == "" || this.userInfo.passWord.trim() == "")
@@ -165,7 +166,7 @@ export default {
       this.loading = true;
       this.http
         .post("/api/user/login", this.userInfo, "正在登录....")
-        .then(result => {
+        .then((result) => {
           if (!result.status) {
             this.loading = false;
             this.getVierificationCode();
@@ -175,8 +176,8 @@ export default {
           this.$store.commit("setUserInfo", result.data);
           this.$router.push({ path: "/" });
         });
-    }
-  }
+    },
+  },
 };
 </script>
 

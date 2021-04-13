@@ -75,17 +75,17 @@ namespace JA.Core.DBManager
             return new SqlConnection(connString); 
         }
 
-        public static VOLContext DbContext
+        public static JAContext DbContext
         {
             get { return GetEFDbContext(); }
         }
-        public static VOLContext GetEFDbContext()
+        public static JAContext GetEFDbContext()
         {
             return GetEFDbContext(null);
         }
-        public static VOLContext GetEFDbContext(string dbName)
+        public static JAContext GetEFDbContext(string dbName)
         {
-            VOLContext beefContext = Utilities.HttpContext.Current.RequestServices.GetService(typeof(VOLContext)) as VOLContext;
+            JAContext beefContext = Utilities.HttpContext.Current.RequestServices.GetService(typeof(JAContext)) as JAContext;
             if (dbName != null)
             {
                 if (!ConnectionPool.ContainsKey(dbName))
@@ -97,7 +97,7 @@ namespace JA.Core.DBManager
             return beefContext;
         }
 
-        public static void SetDbContextConnection(VOLContext beefContext, string dbName)
+        public static void SetDbContextConnection(JAContext beefContext, string dbName)
         {
             if (!ConnectionPool.ContainsKey(dbName))
             {
@@ -111,7 +111,7 @@ namespace JA.Core.DBManager
         /// <typeparam name="TEntity"></typeparam>
         /// <param name="defaultDbContext"></param>
         /// <returns></returns>
-        public static void GetDbContextConnection<TEntity>(VOLContext defaultDbContext)
+        public static void GetDbContextConnection<TEntity>(JAContext defaultDbContext)
         {
             //string connstr= defaultDbContext.Database.GetDbConnection().ConnectionString;
             // if (connstr != ConnectionPool[DefaultConnName])

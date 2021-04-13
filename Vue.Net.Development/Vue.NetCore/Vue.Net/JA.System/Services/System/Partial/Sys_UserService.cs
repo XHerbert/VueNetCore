@@ -11,11 +11,14 @@ using JA.Core.ManageUser;
 using JA.Core.Services;
 using JA.Core.Utilities;
 using JA.Entity.DomainModels;
+using Microsoft.Extensions.Configuration;
 
 namespace JA.System.Services
 {
     public partial class Sys_UserService
     {
+
+        public IConfiguration Configuration { get; }
         /// <summary>
         /// WebApi登录
         /// </summary>
@@ -26,17 +29,20 @@ namespace JA.System.Services
         {
             string msg = string.Empty;
             WebResponseContent responseContent = new WebResponseContent();
-            //   2020.06.12增加验证码
             IMemoryCache memoryCache = HttpContext.Current.GetService<IMemoryCache>();
-            string cacheCode = (memoryCache.Get(loginInfo.UUID) ?? "").ToString();
-            if (string.IsNullOrEmpty(cacheCode))
+            //   2020.06.12增加验证码
+            if (AppSetting.Debug != true)
             {
-                return responseContent.Error("验证码已失效");
-            }
-            if (cacheCode.ToLower() != loginInfo.VerificationCode.ToLower())
-            {
-                memoryCache.Remove(loginInfo.UUID);
-                return responseContent.Error("验证码不正确");
+                string cacheCode = (memoryCache.Get(loginInfo.UUID) ?? "").ToString();
+                if (string.IsNullOrEmpty(cacheCode))
+                {
+                    return responseContent.Error("验证码已失效");
+                }
+                if (cacheCode.ToLower() != loginInfo.VerificationCode.ToLower())
+                {
+                    memoryCache.Remove(loginInfo.UUID);
+                    return responseContent.Error("验证码不正确");
+                }
             }
             try
             {

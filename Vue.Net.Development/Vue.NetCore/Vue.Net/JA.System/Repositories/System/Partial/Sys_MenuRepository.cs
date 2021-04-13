@@ -8,7 +8,7 @@ namespace JA.System.Repositories
 {
     public partial class Sys_MenuRepository
     {
-        public override VOLContext DbContext => base.DbContext;
+        public override JAContext DbContext => base.DbContext;
     }
 }
 

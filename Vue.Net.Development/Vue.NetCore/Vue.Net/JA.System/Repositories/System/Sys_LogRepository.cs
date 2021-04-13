@@ -8,7 +8,7 @@ namespace JA.System.Repositories
 {
     public partial class Sys_LogRepository : RepositoryBase<Sys_Log>, ISys_LogRepository
     {
-        public Sys_LogRepository(VOLContext dbContext)
+        public Sys_LogRepository(JAContext dbContext)
         : base(dbContext)
         {
 

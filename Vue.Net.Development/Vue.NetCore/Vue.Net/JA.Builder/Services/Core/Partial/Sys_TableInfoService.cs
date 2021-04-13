@@ -1685,8 +1685,8 @@ DISTINCT
                 domainContent = "using Newtonsoft.Json;\r\n" + domainContent + "\r\n";
             }
             //获取的是本地开发代码所在目录，不是布后的目录
-            string mapPath = ProjectPath.GetProjectDirectoryInfo()?.FullName; //new DirectoryInfo(("~/").MapPath()).Parent.FullName;
-                                                                              //  string folderPath= string.Format("\\VOL.Framework.Core.\\DomainModels\\{0}\\", foldername);
+            string mapPath = ProjectPath.GetProjectDirectoryInfo()?.FullName;  
+                                                                               
             if (string.IsNullOrEmpty(mapPath))
             {
                 return "未找到生成的目录!";

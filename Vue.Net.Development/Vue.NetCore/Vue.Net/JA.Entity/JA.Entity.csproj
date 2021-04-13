@@ -24,6 +24,7 @@
     <Compile Remove="MappingConfiguration\Message\**" />
     <Compile Remove="MappingConfiguration\My\**" />
     <Compile Remove="MappingConfiguration\Technical\**" />
+    <Compile Remove="System\**" />
     <EmbeddedResource Remove="DomainModels\CJoin\**" />
     <EmbeddedResource Remove="DomainModels\Comment\**" />
     <EmbeddedResource Remove="DomainModels\Message\**" />
@@ -36,6 +37,7 @@
     <EmbeddedResource Remove="MappingConfiguration\Message\**" />
     <EmbeddedResource Remove="MappingConfiguration\My\**" />
     <EmbeddedResource Remove="MappingConfiguration\Technical\**" />
+    <EmbeddedResource Remove="System\**" />
     <None Remove="DomainModels\CJoin\**" />
     <None Remove="DomainModels\Comment\**" />
     <None Remove="DomainModels\Message\**" />
@@ -48,6 +50,7 @@
     <None Remove="MappingConfiguration\Message\**" />
     <None Remove="MappingConfiguration\My\**" />
     <None Remove="MappingConfiguration\Technical\**" />
+    <None Remove="System\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -61,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DomainModels\ApiEntity\OutPut\" />
-    <Folder Include="System\" />
   </ItemGroup>
 
 </Project>

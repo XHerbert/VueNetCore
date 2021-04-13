@@ -14,7 +14,7 @@ namespace JA.System.Repositories
 {
     public partial class Sys_RoleRepository : RepositoryBase<Sys_Role>, ISys_RoleRepository
     {
-        public Sys_RoleRepository(VOLContext dbContext)
+        public Sys_RoleRepository(JAContext dbContext)
         : base(dbContext)
         {
 

@@ -12,3 +12,17 @@ E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Effective\bin\Debug\netcore
 E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Effective\bin\Debug\netcoreapp3.1\VOL.Core.pdb
 E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Effective\bin\Debug\netcoreapp3.1\VOL.Entity.pdb
 E:\vueDot\Vue.NetCore\Vue.NetCore-master\Vue.Net\VOL.Effective\obj\Debug\netcoreapp3.1\VOL.Effective.csproj.CopyComplete
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\bin\Debug\netcoreapp3.1\VOL.Effective.deps.json
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\bin\Debug\netcoreapp3.1\VOL.Effective.dll
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\bin\Debug\netcoreapp3.1\VOL.Effective.pdb
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\bin\Debug\netcoreapp3.1\VOL.Core.dll
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\bin\Debug\netcoreapp3.1\VOL.Entity.dll
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\bin\Debug\netcoreapp3.1\VOL.Core.pdb
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\bin\Debug\netcoreapp3.1\VOL.Entity.pdb
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\obj\Debug\netcoreapp3.1\VOL.Effective.csprojAssemblyReference.cache
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\obj\Debug\netcoreapp3.1\VOL.Effective.AssemblyInfoInputs.cache
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\obj\Debug\netcoreapp3.1\VOL.Effective.AssemblyInfo.cs
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\obj\Debug\netcoreapp3.1\VOL.Effective.csproj.CoreCompileInputs.cache
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\obj\Debug\netcoreapp3.1\VOL.Effective.csproj.CopyComplete
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\obj\Debug\netcoreapp3.1\VOL.Effective.dll
+E:\NetCoreVue\VueNetCore\Vue.Net\VOL.Effective\obj\Debug\netcoreapp3.1\VOL.Effective.pdb

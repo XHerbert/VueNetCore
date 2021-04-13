@@ -19,7 +19,7 @@ namespace JA.Core.BaseProvider
         /// <summary>
         /// EF DBContext
         /// </summary>
-        VOLContext DbContext { get; }
+        JAContext DbContext { get; }
 
         ISqlDapper DapperContext { get; }
         /// <summary>

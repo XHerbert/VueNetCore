@@ -6,6 +6,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>E:\GitHub2019\Vue.NetCore\Vue.Net\VOL.WebApi\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
+    <_PublishTargetUrl>E:\NetCoreVue\VueNetCore\Vue.Net.Development\Vue.NetCore\Vue.Net\JA.WebApi\bin\Release\netcoreapp3.1\publish\</_PublishTargetUrl>
+    <History>True|2021-04-12T13:15:17.0304622Z;True|2021-04-06T17:01:43.7214693+08:00;True|2021-04-06T11:11:17.4325096+08:00;True|2021-04-06T11:04:09.0739391+08:00;False|2021-04-06T11:03:28.1692164+08:00;True|2021-04-06T10:27:42.2970162+08:00;True|2021-04-05T11:46:30.8218974+08:00;</History>
   </PropertyGroup>
 </Project>

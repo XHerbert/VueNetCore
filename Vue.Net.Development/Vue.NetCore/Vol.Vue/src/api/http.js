@@ -16,7 +16,8 @@ else if (process.env.NODE_ENV == 'debug') {
   axios.defaults.baseURL = 'http://127.0.0.1:8990/';
 }
 else if (process.env.NODE_ENV == 'production') {
-  axios.defaults.baseURL = 'http://132.232.2.109:9991/';
+  axios.defaults.baseURL = 'http://ycyh.jxrlcn.com/';
+  //axios.defaults.baseURL = 'http://111.230.87.165:9991/';
 }
 let ipAddress = axios.defaults.baseURL;
 axios.interceptors.request.use((config) => {
