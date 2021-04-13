@@ -24,8 +24,16 @@
 /Vue.Net/VOL.WebApi/wwwroot/Upload/
 /Vue.Net/VOL.Web
 /Vue.Net.Development/Vue.NetCore/Vol.Vue/node_modules
+/Vue.Net.Development/Vue.NetCore/Vol.Vue/dist
+/Vue.Net.Development/Vue.NetCore/Vol.Vue/dist.zip
 /Vue.Net.Development/Vue.NetCore/Vue.Net/JA.System/bin
+/Vue.Net.Development/Vue.NetCore/Vue.Net/.vs
 /Vue.Net.Development/Vue.NetCore/Vue.Net/JA.WebApi/bin
+/Vue.Net.Development/Vue.NetCore/Vue.Net/JA.WebApi/Download/*
+/Vue.Net.Development/Vue.NetCore/Vue.Net/JA.WebApi/wwwroot/*
+/Vue.Net.Development/Vue.NetCore/Vue.Net/JA.WebApi/obj
+/Vue.Net.Development/Vue.NetCore/Vue.Net/JA.Business/obj/*
+/Vue.Net.Development/Vue.NetCore/Vue.Net/JA.Business/bin/*
 /Vue.Net.Development/Vue.NetCore/Vue.Net/JA.Entity/bin
 /Vue.Net.Development/Vue.NetCore/Vue.Net/JA.Builder/bin
 /Vue.Net.Development/Vue.NetCore/Vue.Net/JA.Core/obj
