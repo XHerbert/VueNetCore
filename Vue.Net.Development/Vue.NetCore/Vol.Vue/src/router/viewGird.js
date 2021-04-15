@@ -69,6 +69,10 @@ let viewgird = [
         name: 'monthRentReport',
         component: () => import('@/views/business/MonthRentReport.vue')
     }, {
+        path: '/InputDetailReport',
+        name: 'inputDetailReport',
+        component: () => import('@/views/business/InputDetailReport.vue')
+    }, {
         path: '/tenantsRentReport',
         name: 'tenantsRentReport',
         component: () => import('@/views/business/TenantsRentReport.vue')
