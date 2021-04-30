@@ -57,8 +57,10 @@ namespace JA.WebApi
             services.AddControllers()
               .AddNewtonsoftJson(op =>
               {
-                  op.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+                  //op.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+                  op.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver();
                   op.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+
               });
 
             Services.AddAuthentication(options =>
@@ -105,7 +107,7 @@ namespace JA.WebApi
                     {
                         builder.WithOrigins(corsUrls.Split(","))
                         //添加预检请求过期时间
-                         .SetPreflightMaxAge(TimeSpan.FromSeconds(2520))
+                        .SetPreflightMaxAge(TimeSpan.FromSeconds(2520))
                         .AllowCredentials()
                         .AllowAnyHeader().AllowAnyMethod();
                     });
