@@ -5,6 +5,11 @@
     <UserSecretsId>2aa4eaa6-f6c9-42b2-b8e0-54ef084973d4</UserSecretsId>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>E:\NetCoreVue\VueNetCore\Vue.Net.Development\Vue.NetCore\Vue.Net\JA.WebApi</DocumentationFile>
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.0" />

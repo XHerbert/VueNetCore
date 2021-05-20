@@ -57,8 +57,8 @@ namespace JA.WebApi
             services.AddControllers()
               .AddNewtonsoftJson(op =>
               {
-                  //op.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
-                  op.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver();
+                  op.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+                  //op.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver();
                   op.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
 
               });
@@ -142,6 +142,9 @@ namespace JA.WebApi
                         new string[] { }
                     }
                 });
+                var basePath = Path.GetDirectoryName(typeof(Program).Assembly.Location);//获取应用程序所在目录（绝对，不受工作目录影响，建议采用此方法获取路径）
+                var xmlPath = Path.Combine(basePath, "JA.WebApi.xml");
+                c.IncludeXmlComments(xmlPath);
             })
              .AddControllers()
             .ConfigureApiBehaviorOptions(options =>
@@ -193,6 +196,7 @@ namespace JA.WebApi
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "JA.Core后台Api");
+               
             });
             app.UseRouting();
             //UseCors,UseAuthenticationg两个位置的顺序很重要 

@@ -19,6 +19,11 @@ namespace JA.WebApi.Controllers
     [Route("api/customPay")]
     public class CustomPayController : Controller
     {
+        /// <summary>
+        /// 缴费接口
+        /// </summary>
+        /// <param name="customPayRequest"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("PayRentFee")]
         public IActionResult PayRentFee([FromBody] CustomPayRequest customPayRequest)
@@ -27,13 +32,23 @@ namespace JA.WebApi.Controllers
             return Json(new BaseResponse { STATUS = 1, MESSAGE = "缴费成功" });
         }
 
-        [HttpGet]
+        /// <summary>
+        /// 查询接口
+        /// </summary>
+        /// <param name="customRequest">客户ID号</param>
+        /// <returns></returns>
+        [HttpPost]
         [Route("Query")]
         public IActionResult QueryRentFee([FromBody] CustomRequest customRequest)
         {
             return Json(new BaseResponse { STATUS = 1, MESSAGE = "成功" });
         }
 
+        /// <summary>
+        /// 对账文件上传
+        /// </summary>
+        /// <param name="keyValuePairs"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("Transfer")]
         public IActionResult PostText([FromForm] IFormCollection keyValuePairs)
