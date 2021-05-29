@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using JA.Core.Services;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace JA.WebApi.Controllers
 {
@@ -28,7 +29,7 @@ namespace JA.WebApi.Controllers
         [Route("PayRentFee")]
         public IActionResult PayRentFee([FromBody] CustomPayRequest customPayRequest)
         {
-
+            Logger.Info(Core.Enums.LoggerType.Info, JsonConvert.SerializeObject(customPayRequest));
             return Json(new BaseResponse { STATUS = 1, MESSAGE = "缴费成功" });
         }
 
@@ -41,6 +42,7 @@ namespace JA.WebApi.Controllers
         [Route("Query")]
         public IActionResult QueryRentFee([FromBody] CustomRequest customRequest)
         {
+            Logger.Info(Core.Enums.LoggerType.Info, JsonConvert.SerializeObject(customRequest));
             return Json(new BaseResponse { STATUS = 1, MESSAGE = "成功" });
         }
 

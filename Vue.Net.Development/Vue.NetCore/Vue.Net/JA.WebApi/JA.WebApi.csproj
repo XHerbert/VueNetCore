@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>E:\NetCoreVue\VueNetCore\Vue.Net.Development\Vue.NetCore\Vue.Net\JA.WebApi</DocumentationFile>
     <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

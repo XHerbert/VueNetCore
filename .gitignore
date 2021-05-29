@@ -43,3 +43,13 @@
 /Vue.Net.Development/Vue.NetCore/Vue.Net/JA.WebApi/obj
 /Vue.Net.Development/Vue.NetCore/Vue.Net/JA.Core/bin
 Vue.Net.Development/Vue.NetCore/Vue.Net/JA.WebApi/obj/Debug/netcoreapp3.1/JA.WebApi.csprojAssemblyReference.cache
+*.dll
+/开发版dev/Vue.NetCore/Vue.Net/VOL.Builder/obj
+/开发版dev/Vue.NetCore/Vue.Net/VOL.Core/obj
+/开发版dev/Vue.NetCore/Vue.Net/VOL.Entity/obj
+/开发版dev/Vue.NetCore/Vue.Net/VOL.System/obj
+/开发版dev/Vue.NetCore/Vue.Net/VOL.WebApi/obj/Debug/netcoreapp3.1
+/开发版dev/Vue.NetCore/Vue.Net/VOL.WebApi/obj/Release/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+/开发版dev/Vue.NetCore/Vue.Net/VOL.WebApi/obj/Release/netcoreapp3.1/VOL.WebApi.AssemblyInfoInputs.cache
+/开发版dev/Vue.NetCore/Vue.Net/VOL.WebApi/obj/Release/netcoreapp3.1/VOL.WebApi.AssemblyInfo.cs
+/.vs

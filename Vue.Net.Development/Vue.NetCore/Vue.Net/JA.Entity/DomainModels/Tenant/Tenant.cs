@@ -147,6 +147,33 @@ namespace JA.Entity.DomainModels
        [Editable(true)]
        public int? BelongUnit { get; set; }
 
+       /// <summary>
+       ///缴款账号
+       /// </summary>
+       [Display(Name ="缴款账号")]
+       [MaxLength(45)]
+       [Column(TypeName="nvarchar(45)")]
+       [Editable(true)]
+       public string BankCard { get; set; }
+
+       /// <summary>
+       ///户名
+       /// </summary>
+       [Display(Name ="户名")]
+       [MaxLength(450)]
+       [Column(TypeName="nvarchar(450)")]
+       [Editable(true)]
+       public string AccountName { get; set; }
+
+       /// <summary>
+       ///开户行
+       /// </summary>
+       [Display(Name ="开户行")]
+       [MaxLength(45)]
+       [Column(TypeName="nvarchar(45)")]
+       [Editable(true)]
+       public string Bank { get; set; }
+
        
     }
 }
