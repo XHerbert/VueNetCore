@@ -37,6 +37,68 @@ namespace JA.Entity.DomainModels
        public string HouseCode { get; set; }
 
        /// <summary>
+       ///房屋面积
+       /// </summary>
+       [Display(Name ="房屋面积")]
+       [DisplayFormat(DataFormatString="10,2")]
+       [Column(TypeName="decimal")]
+       [Editable(true)]
+       public decimal? Area { get; set; }
+
+       /// <summary>
+       ///县区
+       /// </summary>
+       [Display(Name ="县区")]
+       [MaxLength(450)]
+       [Column(TypeName="nvarchar(450)")]
+       [Editable(true)]
+       public string District { get; set; }
+
+       /// <summary>
+       ///乡镇（街道）
+       /// </summary>
+       [Display(Name ="乡镇（街道）")]
+       [MaxLength(450)]
+       [Column(TypeName="nvarchar(450)")]
+       [Editable(true)]
+       public string Township { get; set; }
+
+       /// <summary>
+       ///社区（村委会）
+       /// </summary>
+       [Display(Name ="社区（村委会）")]
+       [MaxLength(450)]
+       [Column(TypeName="nvarchar(450)")]
+       [Editable(true)]
+       public string Village { get; set; }
+
+       /// <summary>
+       ///小区
+       /// </summary>
+       [Display(Name ="小区")]
+       [MaxLength(245)]
+       [Column(TypeName="nvarchar(245)")]
+       public string Group { get; set; }
+
+       /// <summary>
+       ///楼栋号
+       /// </summary>
+       [Display(Name ="楼栋号")]
+       [MaxLength(45)]
+       [Column(TypeName="nvarchar(45)")]
+       [Editable(true)]
+       public string BuildingNumber { get; set; }
+
+       /// <summary>
+       ///单元号
+       /// </summary>
+       [Display(Name ="单元号")]
+       [MaxLength(45)]
+       [Column(TypeName="nvarchar(45)")]
+       [Editable(true)]
+       public string UnitNumber { get; set; }
+
+       /// <summary>
        ///房号
        /// </summary>
        [Display(Name ="房号")]
@@ -46,18 +108,10 @@ namespace JA.Entity.DomainModels
        public string HouseNumber { get; set; }
 
        /// <summary>
-       ///房屋面积(平米)
-       /// </summary>
-       [Display(Name ="房屋面积(平米)")]
-       [DisplayFormat(DataFormatString="10,2")]
-       [Column(TypeName="decimal")]
-       [Editable(true)]
-       public decimal? Area { get; set; }
-
-       /// <summary>
        ///所属单位
        /// </summary>
        [Display(Name ="所属单位")]
+       [JsonIgnore]
        [Column(TypeName="int")]
        [Editable(true)]
        public int? BelongUnit { get; set; }
@@ -67,6 +121,7 @@ namespace JA.Entity.DomainModels
        /// </summary>
        [Display(Name ="地址")]
        [MaxLength(200)]
+       [JsonIgnore]
        [Column(TypeName="nvarchar(200)")]
        [Editable(true)]
        public string HouseAddress { get; set; }
@@ -88,9 +143,9 @@ namespace JA.Entity.DomainModels
        public int? HouseStatus { get; set; }
 
        /// <summary>
-       ///房屋租金(元)
+       ///房屋租金
        /// </summary>
-       [Display(Name ="房屋租金(元)")]
+       [Display(Name ="房屋租金")]
        [DisplayFormat(DataFormatString="10,2")]
        [Column(TypeName="decimal")]
        [Editable(true)]
@@ -100,6 +155,7 @@ namespace JA.Entity.DomainModels
        ///是否启用
        /// </summary>
        [Display(Name ="是否启用")]
+       [JsonIgnore]
        [Column(TypeName="int")]
        [Editable(true)]
        public int? EnableFlag { get; set; }
@@ -118,6 +174,7 @@ namespace JA.Entity.DomainModels
        /// </summary>
        [Display(Name ="创建人")]
        [MaxLength(30)]
+       [JsonIgnore]
        [Column(TypeName="nvarchar(30)")]
        [Required(AllowEmptyStrings=false)]
        public string Creator { get; set; }
@@ -126,6 +183,7 @@ namespace JA.Entity.DomainModels
        ///创建时间
        /// </summary>
        [Display(Name ="创建时间")]
+       [JsonIgnore]
        [Column(TypeName="datetime")]
        public DateTime? CreateDate { get; set; }
 
@@ -153,51 +211,6 @@ namespace JA.Entity.DomainModels
        [JsonIgnore]
        [Column(TypeName="nvarchar(30)")]
        public string Modifier { get; set; }
-
-       /// <summary>
-       ///房屋单元号
-       /// </summary>
-       [Display(Name ="房屋单元号")]
-       [MaxLength(45)]
-       [Column(TypeName="nvarchar(45)")]
-       [Editable(true)]
-       public string UnitNumber { get; set; }
-
-       /// <summary>
-       ///楼栋号
-       /// </summary>
-       [Display(Name ="楼栋号")]
-       [MaxLength(45)]
-       [Column(TypeName="nvarchar(45)")]
-       [Editable(true)]
-       public string BuildingNumber { get; set; }
-
-       /// <summary>
-       ///小区（村委会）
-       /// </summary>
-       [Display(Name ="小区（村委会）")]
-       [MaxLength(450)]
-       [Column(TypeName="nvarchar(450)")]
-       [Editable(true)]
-       public string Village { get; set; }
-
-       /// <summary>
-       ///乡镇（街道）
-       /// </summary>
-       [Display(Name ="乡镇（街道）")]
-       [MaxLength(450)]
-       [Column(TypeName="nvarchar(450)")]
-       [Editable(true)]
-       public string Township { get; set; }
-
-       /// <summary>
-       ///县区
-       /// </summary>
-       [Display(Name ="县区")]
-       [MaxLength(450)]
-       [Column(TypeName="nvarchar(450)")]
-       [Editable(true)]
-       public string District { get; set; }
 
        
     }

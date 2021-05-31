@@ -29,17 +29,17 @@ namespace JA.Entity.DomainModels
        public int Id { get; set; }
 
        /// <summary>
-       ///编码
+       ///编号
        /// </summary>
-       [Display(Name ="编码")]
+       [Display(Name ="编号")]
        [MaxLength(30)]
        [Column(TypeName="nvarchar(30)")]
        public string TenantCode { get; set; }
 
        /// <summary>
-       ///姓名
+       ///户主姓名
        /// </summary>
-       [Display(Name ="姓名")]
+       [Display(Name ="户主姓名")]
        [MaxLength(30)]
        [Column(TypeName="nvarchar(30)")]
        [Editable(true)]
@@ -54,18 +54,18 @@ namespace JA.Entity.DomainModels
        public int? Gender { get; set; }
 
        /// <summary>
-       ///手机号
+       ///手机电话
        /// </summary>
-       [Display(Name ="手机号")]
-       [MaxLength(11)]
-       [Column(TypeName="nvarchar(11)")]
+       [Display(Name ="手机电话")]
+       [MaxLength(30)]
+       [Column(TypeName="nvarchar(30)")]
        [Editable(true)]
        public string Mobile { get; set; }
 
        /// <summary>
-       ///身份证
+       ///身份证号
        /// </summary>
-       [Display(Name ="身份证")]
+       [Display(Name ="身份证号")]
        [MaxLength(20)]
        [Column(TypeName="nvarchar(20)")]
        [Editable(true)]
@@ -81,9 +81,45 @@ namespace JA.Entity.DomainModels
        public string Address { get; set; }
 
        /// <summary>
+       ///租金
+       /// </summary>
+       [Display(Name ="租金")]
+       [DisplayFormat(DataFormatString="10,2")]
+       [Column(TypeName="decimal")]
+       public decimal? RentFee { get; set; }
+
+       /// <summary>
+       ///缴款账号
+       /// </summary>
+       [Display(Name ="缴款账号")]
+       [MaxLength(45)]
+       [Column(TypeName="nvarchar(45)")]
+       [Editable(true)]
+       public string BankCard { get; set; }
+
+       /// <summary>
+       ///户名
+       /// </summary>
+       [Display(Name ="户名")]
+       [MaxLength(450)]
+       [Column(TypeName="nvarchar(450)")]
+       [Editable(true)]
+       public string AccountName { get; set; }
+
+       /// <summary>
+       ///开户行
+       /// </summary>
+       [Display(Name ="开户行")]
+       [MaxLength(45)]
+       [Column(TypeName="nvarchar(45)")]
+       [Editable(true)]
+       public string Bank { get; set; }
+
+       /// <summary>
        ///是否有效
        /// </summary>
        [Display(Name ="是否有效")]
+       [JsonIgnore]
        [Column(TypeName="int")]
        [Editable(true)]
        public int? EnableFlag { get; set; }
@@ -102,6 +138,7 @@ namespace JA.Entity.DomainModels
        /// </summary>
        [Display(Name ="创建人")]
        [MaxLength(30)]
+       [JsonIgnore]
        [Column(TypeName="nvarchar(30)")]
        [Required(AllowEmptyStrings=false)]
        public string Creator { get; set; }
@@ -110,6 +147,7 @@ namespace JA.Entity.DomainModels
        ///创建日期
        /// </summary>
        [Display(Name ="创建日期")]
+       [JsonIgnore]
        [Column(TypeName="datetime")]
        public DateTime? CreateDate { get; set; }
 
@@ -146,33 +184,6 @@ namespace JA.Entity.DomainModels
        [Column(TypeName="int")]
        [Editable(true)]
        public int? BelongUnit { get; set; }
-
-       /// <summary>
-       ///缴款账号
-       /// </summary>
-       [Display(Name ="缴款账号")]
-       [MaxLength(45)]
-       [Column(TypeName="nvarchar(45)")]
-       [Editable(true)]
-       public string BankCard { get; set; }
-
-       /// <summary>
-       ///户名
-       /// </summary>
-       [Display(Name ="户名")]
-       [MaxLength(450)]
-       [Column(TypeName="nvarchar(450)")]
-       [Editable(true)]
-       public string AccountName { get; set; }
-
-       /// <summary>
-       ///开户行
-       /// </summary>
-       [Display(Name ="开户行")]
-       [MaxLength(45)]
-       [Column(TypeName="nvarchar(45)")]
-       [Editable(true)]
-       public string Bank { get; set; }
 
        
     }
