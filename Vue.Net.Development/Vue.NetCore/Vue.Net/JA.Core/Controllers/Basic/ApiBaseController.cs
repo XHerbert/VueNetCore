@@ -12,6 +12,7 @@ using JA.Entity.DomainModels;
 namespace JA.Core.Controllers.Basic
 {
     [JWTAuthorize, ApiController]
+    [ApiExplorerSettings(IgnoreApi = true)]
     public class ApiBaseController<IServiceBase> : BaseController<IServiceBase>
     {
         public ApiBaseController(IServiceBase service)

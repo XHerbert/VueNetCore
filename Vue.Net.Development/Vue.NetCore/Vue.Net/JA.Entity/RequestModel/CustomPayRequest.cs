@@ -9,7 +9,7 @@ namespace JA.Entity.RequestModel
         /// <summary>
         /// 缴费专号
         /// </summary>
-        public int CUST_ID { get; set; }
+        public string CUST_ID { get; set; }
         /// <summary>
         /// 账期
         /// </summary>
@@ -17,10 +17,10 @@ namespace JA.Entity.RequestModel
         /// <summary>
         /// 缴费金额
         /// </summary>
-        public int TX_AMOUNT { get; set; }
+        public decimal TX_AMOUNT { get; set; }
         /// <summary>
         /// 凭证流水
         /// </summary>
-        public int TX_SERIAL_NO { get; set; }
+        public string TX_SERIAL_NO { get; set; }
     }
 }

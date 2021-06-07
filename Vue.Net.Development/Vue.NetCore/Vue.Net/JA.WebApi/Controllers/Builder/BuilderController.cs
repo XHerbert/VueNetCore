@@ -8,6 +8,7 @@ using JA.Entity.DomainModels;
 namespace JA.WebApi.Controllers.Builder
 {
     [JWTAuthorize]
+    [ApiExplorerSettings(IgnoreApi = true)]
     [Route("/api/Builder")]
     public class BuilderController : Controller
     {

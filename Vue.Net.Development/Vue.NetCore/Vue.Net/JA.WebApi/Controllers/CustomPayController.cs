@@ -11,6 +11,9 @@ using System.Threading.Tasks;
 using JA.Core.Services;
 using System.IO;
 using Newtonsoft.Json;
+using JA.Business.Services;
+using JA.Core.Controllers.Basic;
+using JA.Entity.DomainModels;
 
 namespace JA.WebApi.Controllers
 {
@@ -20,6 +23,12 @@ namespace JA.WebApi.Controllers
     [Route("api/customPay")]
     public class CustomPayController : Controller
     {
+
+
+        private readonly TenantService _tenantService;
+
+
+
         /// <summary>
         /// 缴费接口
         /// </summary>
@@ -42,8 +51,19 @@ namespace JA.WebApi.Controllers
         [Route("Query")]
         public IActionResult QueryRentFee([FromBody] CustomRequest customRequest)
         {
+            TenantService tenantService = (TenantService)TenantService.Instance;
+            Tenant tenant = tenantService.GetTenant(customRequest.CUST_ID);
+            object DATA = new
+            {
+                CUST_ID = customRequest.CUST_ID,
+                CUST_NAME = tenant.TenantName,
+                HOME_ADDR = tenant.Address,
+                TOTAL_AMT = 0,
+                TRAN_AMT = 0,
+                DETAILNUM = 1
+            };
             Logger.Info(Core.Enums.LoggerType.Info, JsonConvert.SerializeObject(customRequest));
-            return Json(new BaseResponse { STATUS = 1, MESSAGE = "成功" });
+            return Json(new BaseResponse { DATA = DATA, STATUS = 1, MESSAGE = "成功" });
         }
 
         /// <summary>

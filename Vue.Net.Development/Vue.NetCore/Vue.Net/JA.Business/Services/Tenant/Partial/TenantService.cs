@@ -71,5 +71,11 @@ namespace JA.Business.Services
             };
             return base.GetPageData(options);
         }
+
+        public Tenant GetTenant(string custId)
+        {
+            Tenant t = _repository.FindFirst(item => item.TenantCode == custId);
+            return t;
+        }
     }
 }

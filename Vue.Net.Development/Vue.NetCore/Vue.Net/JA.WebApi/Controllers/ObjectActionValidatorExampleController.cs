@@ -20,6 +20,7 @@ namespace JA.WebApi.Controllers
     /// --并在UseMethodsModelParameters方法注入,添加新的指定字段即可
     /// </summary>
     [JWTAuthorize, ApiController]
+    [ApiExplorerSettings(IgnoreApi = true)]
     [Route("validatorExample")]
     public class ObjectActionValidatorExampleController: Controller
     {
